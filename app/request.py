@@ -43,3 +43,33 @@ def get_sources(category):
 
     return source_results
 
+
+def process_source_results(source_list):
+    '''
+    Function  that processes the movie result and transform them to a list of Objects
+
+    Args:
+        movie_list: A list of dictionaries that contain movie details
+
+    Returns :
+        movie_results: A list of movie objects
+    '''
+    source_results = []
+    for source_item in source_list:
+        Image = source_item.get('urlToImage')
+        id = source_item.get('id')
+        title = source_item.get('title')
+        name = source_item.get('name')
+        author= source_item.get('author')
+        description = source_item.get('description')
+        publishedAt= source_item.get('publishedAt')
+        url= source_item.get('url')
+        
+       
+
+        
+        source_object = Sources(id,name,author,title,description,publishedAt,Image,url)
+        source_results.append(source_object)
+
+    return source_results  
+
