@@ -1,6 +1,6 @@
 ## Project Name
 
-#### NEWS API
+#### NEWS APP
 
 - Developer: George Mboya
 

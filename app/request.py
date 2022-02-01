@@ -1,8 +1,6 @@
 import urllib.request,json
 from .models import Sources, Articles
-# import ssl
 
-# ssl._create_default_https_context= ssl._create_unverified_context
 
 Source = Sources
 
