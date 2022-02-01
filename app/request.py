@@ -73,3 +73,51 @@ def process_source_results(source_list):
 
     return source_results  
 
+
+def get_articles(id):
+    '''
+    Function that gets the json response to our url request
+    '''
+    get_articles_url = articles_url.format(id,api_key)
+
+    with urllib.request.urlopen(get_articles_url) as url:
+        get_articles_data = url.read()
+        get_articles_response = json.loads(get_articles_data)
+
+        articles_results = None
+
+        if get_articles_response['articles']:
+           articles_results_list = get_articles_response['articles']
+           articles_results = process_source_results(articles_results_list)
+
+
+    return articles_results
+
+
+def process_articles_results(articles_list):
+    '''
+    Function  that processes the news result and transform them to a list of Objects
+
+    Args:
+        article_list: A list of dictionaries that contain news details
+
+    Returns :
+        article_results: A list of article objects
+    '''
+    article_results = []
+    for article_item in articles_list:
+        urlToImage = article_item.get('urlToImage')
+        title = article_item.get('title')
+        name = article_item.get('name')
+        author= article_item.get('author')
+        description = article_item.get('description')
+        publishedAt= article_item.get('publishedAt')
+        url= article_item.get('url')
+
+
+
+        
+        article_object = Articles(name,author,title,description,publishedAt,urlToImage,url)
+        article_results.append(article_object)
+
+    return article_results      
