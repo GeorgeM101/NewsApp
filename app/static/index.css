@@ -1,0 +1,9 @@
+#general {
+  background-image: url(../images/technology.jpeg);
+  height: 50vh;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  padding-bottom: 10px;
+}
