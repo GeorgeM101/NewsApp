@@ -2,56 +2,49 @@
 {{ super }}
 <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}" />
 {% endblock %} {% block content %}
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <!-- General News -->
-        <h3 class="">General News</h3>
-        <br />
-        <div class="">{{macro.displaySourceList(general)}}</div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
-      <div class="col-md-4">
+
+<div class="container-fluid">
+  <div class="container" style="display: flex">
+    <div class="row">
+      <div class="col-md-7">
         <!-- Business News -->
         <h3>Business News</h3>
         <br />
         <div class>{{macro.displaySourceList(business)}}</div>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="">
         <!-- Technology News -->
         <h3>Technology News</h3>
-        <hr />
-        <div class="is-flex" style="display: flex; flex-wrap: wrap">
-          {{macro.displaySourceList(technology)}}
-        </div>
+        <br />
+        <div class=> {{macro.displaySourceList(technology)}}
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <!-- Sports News -->
-        <h3>Sports News</h3>
-        <hr />
-        <div class="">{{macro.displaySourceList(sports)}}</div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <!-- Entertainment News -->
-        <h3>Entertainment News</h3>
-        <hr />
-        <div class="is-flex">{{macro.displaySourceList(entertainment)}}</div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <!-- Health News -->
-        <h3>Health News</h3>
-        <hr />
-        <div>{{macro.displaySourceList(health)}}</div>
-      </div>
-      <div>
-        <!-- Science News -->
-        <h3>Science News</h3>
-        <hr />
-        <div class>{{macro.displaySourceList(science)}}</div>
-      </div>
+      <div class="col-md-6"></div>
+      <div class=>
+      <!-- Sports News -->
+      <h3>Sports News</h3>
+      <br />
+      <div class="">{{macro.displaySourceList(sports)}}</div>
+    </div>
+    <div class="">
+      <!-- Entertainment News -->
+      <h3>Entertainment News</h3>
+      <br />
+      <div class="is-flex">{{macro.displaySourceList(entertainment)}}</div>
+    </div>
+    <div class="">
+      <!-- Health News -->
+      <h3>Health News</h3>
+      <br />
+      <div>{{macro.displaySourceList(health)}}</div>
+    </div>
+    <div>
+      <!-- Science News -->
+      <h3>Science News</h3>
+      <br />
+      <div class>{{macro.displaySourceList(science)}}</div>
     </div>
   </div>
+  <div></div>
 </div>
 
 {% endblock %}
