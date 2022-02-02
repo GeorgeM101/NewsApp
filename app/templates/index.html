@@ -9,56 +9,63 @@
 <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}" />
 {% endblock %} {% block content %}
 
-
 <div class="container-fluid">
-  <div class="container"
->
   <div class="row">
-    <div class="col-md-8">
-        <!-- General News -->
-        <h3 class="">General News</h3>
-        <br /></div>
-  
-        <div class="">{{macro.displaySourceList(general)}}</div>
-      <div class="col-md-4">
-        <!-- Business News -->
-        <h3>Business News</h3>
-        <br />
-        <div class>{{macro.displaySourceList(business)}}</div>
+    <div class="col-md-4" width="100%">
+      <h3 class="text-primary">Business News</h3>
+      <img
+        src="{{url_for('static', filename='images/business.jpeg')}}"
+        alt="business parters"
+        width="100%"
+      />
+      <div style="width: 100%">{{macro.displaySourceList(business)}}</div>
+    </div>
+    <div class="col-md-4" width="100%">
+      <h3 class="text-primary">Technology News</h3>
+      <img
+        src="{{url_for('static', filename='images/technology.jpeg')}}"
+        alt="business parters"
+        width="100%"
+      />
+      <div>{{macro.displaySourceList(technology)}}</div>
+    </div>
+    <div class="col-md-4" width="100%">
+      <h3 class="text-primary">Sports News</h3>
+      <img
+        src="{{url_for('static', filename='images/sports.jpeg')}}"
+        alt="business parters"
+        width="100%"
+      />
+      <div class="">{{macro.displaySourceList(sports)}}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" width="100%">
+      <h3 class="text-primary">Entertainment</h3>
+      <div class="is-flex">{{macro.displaySourceList(entertainment)}}</div>
+      <div class="col-md-4" width="100%">
+        <h3 class="text-primary"></h3>
+        <h3 class="text-primary">Science News</h3>
+        <div>{{macro.displaySourceList(science)}}</div>
       </div>
-        <!-- Technology News -->
-        <h3>Technology News</h3>
-        <br />
-        <div>
-          {{macro.displaySourceList(technology)}}
-        </div>
-      </div>
-      <div >
-        <!-- Sports News -->
-        <h3>Sports News</h3>
-        <br />
-        <div class="">{{macro.displaySourceList(sports)}}</div>
-      </div>
-      <div >
-        <!-- Entertainment News -->
-        <h3>Entertainment News</h3>
-        <br />
-        <div class="is-flex">{{macro.displaySourceList(entertainment)}}</div>
-      </div>
-      <div>
-        <!-- Health News -->
-        <h3>Health News</h3>
-        <br />
+      <div class="col-md-4" width="100%">
+        <h3 class="text-primary">Health News</h3>
+        <img
+          src="{{url_for('static', filename='images/health.jpeg')}}"
+          alt="business parters"
+          width="100%"
+        />
         <div>{{macro.displaySourceList(health)}}</div>
-      </div>
-      <div>
-        <!-- Science News -->
-        <h3>Science News</h3>
-        <br />
-        <div class>{{macro.displaySourceList(science)}}</div>
       </div>
     </div>
   </div>
 </div>
+<div class="container-fluid">
+  <div class="container" style="display: flex; align-items: center">
+    <div class="col-md-12">
+      <div class="">{{macro.displaySourceList(general)}}</div>
+    </div>
+  </div>
 
-{% endblock %}
+  {% endblock %}
+</div>
