@@ -39,28 +39,42 @@
       <div class="">{{macro.displaySourceList(sports)}}</div>
     </div>
   </div>
+</div>
+</div>
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-4" width="100%">
+      <h3 class="text-primary">Health News</h3>
+      <img
+        src="{{url_for('static', filename='images/health.jpg')}}"
+        alt="business parters"
+        width="100%"
+      />
+      <div style="width: 100%">{{macro.displaySourceList(health)}}</div>
+    </div>
+    <div class="col-md-4" width="100%">
+      <h3 class="text-primary">Science News</h3>
+      <img
+        src="{{url_for('static', filename='images/science.jpeg')}}"
+        alt="business parters"
+        width="100%"
+      />
+      <div>{{macro.displaySourceList(science)}}</div>
+    </div>
+    <div class="col-md-4" width="100%">
       <h3 class="text-primary">Entertainment</h3>
-      <div class="is-flex">{{macro.displaySourceList(entertainment)}}</div>
-      <div class="col-md-4" width="100%">
-        <h3 class="text-primary"></h3>
-        <h3 class="text-primary">Science News</h3>
-        <div>{{macro.displaySourceList(science)}}</div>
-      </div>
-      <div class="col-md-4" width="100%">
-        <h3 class="text-primary">Health News</h3>
-        <img
-          src="{{url_for('static', filename='images/health.jpeg')}}"
-          alt="business parters"
-          width="100%"
-        />
-        <div>{{macro.displaySourceList(health)}}</div>
-      </div>
+      <img
+        src="{{url_for('static', filename='images/sports.jpeg')}}"
+        alt="business parters"
+        width="100%"
+      />
+      <div class="">{{macro.displaySourceList(entertainment)}}</div>
     </div>
   </div>
 </div>
+</div>
 <div class="container-fluid">
+  <h1 class="text-danger">Other News</h2>
   <div class="container" style="display: flex; align-items: center">
     <div class="col-md-12">
       <div class="">{{macro.displaySourceList(general)}}</div>
@@ -68,4 +82,3 @@
   </div>
 
   {% endblock %}
-</div>

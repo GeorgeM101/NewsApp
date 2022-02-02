@@ -1,29 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div>
+  <h2>Global News </h2>
+</div>
+<div
+  class="navbar navbar-inverse"
+  role="navigation"
+  style="
+    margin-top:10px;
+    height: 100vh;
+    background-image: url({{url_for('static', filename='images/cover.jpg')}});
+    background-size: cover;
+    background-repeat: no-repeat;
+  "
+/></div>
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">NewsApp</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Global News</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Other News</a>
-        </li>
-      </ul>
+    <div class="navbar-header">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
   </div>
-</nav>
+</div>
